@@ -1,4 +1,4 @@
-// Task 1
+// Task 1: Create an Inventory Array of Product Objects
 
 let Inventory = [
     {
@@ -23,3 +23,12 @@ let Inventory = [
     }
 ]
 //array of objects
+
+// Task 2: Create an Orders Array of Order Objects
+
+let Orders = []             // Array of Order Objects
+
+
+
+
+}
