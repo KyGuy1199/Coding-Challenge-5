@@ -39,7 +39,8 @@ function customerOrder(customerName, items) {  // customerOrder will include cus
 }
 
 function placeOrder(customerName, orderedItems) {
-    items.quantity = (items.quantity - items.quantityOrdered);  //Reduce quantity based on sales
+    const items = inventory.find(items => items.name == items.name);
+    items.quantity = (items.quantity -= items.quantityOrdered);  //Reduce quantity based on sales
     if (items.quantity >= items.quantityOrdered) {
          console.log("In Stock");
     } else if  (items.quantity == 0) {
@@ -54,3 +55,17 @@ const Order = {
 }
 
 Orders.push(Order);  //Added the order to orders array
+
+// Task 4: Create a Function to Calculate Total for an Order
+
+function calculateOrderTotal(Order) {
+    let total = 0;
+
+    for(let items of order.items) {
+        const items = inventory.find(items => items.name == orderedItems.name);
+            if (items) {
+                total += items.price * items.quantity;   // finding total by multiplying price times quantity
+            }
+    }
+    return total;
+}
