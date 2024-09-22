@@ -83,4 +83,17 @@ function completeOrder(customerName) {
     
 }
 
+// Task 6:Create a Function to Check Pending Orders
 
+function checkPendingOrders() {
+    const pendingOrders = Orders.filter(Order => Order.status == "Pending");
+
+    if (pendingOrders.length == 0) {
+        console.log("No Pending Orders");       //Message in event of no pending orders
+    } else {
+        console.log("Pending Orders:");
+        for(let Order of pendingOrders) {
+            console.log('Customer: ${Order.customerName}, Items:', Order.items, 'Status: ${Order.status}');
+        }
+    }
+}
